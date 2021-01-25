@@ -26,6 +26,7 @@ import {LoginComponent} from './components/login/login.component';
     FlexLayoutModule,
     FormsModule,
     ReactiveFormsModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

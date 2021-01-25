@@ -7,6 +7,7 @@ import { HttpClient } from '@angular/common/http';
 export class LoginService {
 
   private REST_API_SERVER = 'http://localhost:5000/cards';
+  private loginApi = 'http://localhost:5000/login';
 
   constructor(private httpClient: HttpClient) { }
 
@@ -14,4 +15,7 @@ export class LoginService {
     return this.httpClient.get(this.REST_API_SERVER);
   }
 
+  public loginUser(formData: any): any {
+    return this.httpClient.post(this.loginApi, formData);
+  }
 }
