@@ -1,0 +1,18 @@
+<div class="example-header">
+
+</div>
+
+<div class="example-container mat-elevation-z8">
+  <mat-form-field>
+    <input matInput #filterInput (keyup)="applyFilter()" placeholder="Filter">
+  </mat-form-field>
+      <mat-table mat-table [dataSource]="dataSource" matSort>
+        <mat-text-column name="id"></mat-text-column>
+        <mat-text-column name="name"></mat-text-column>
+        <mat-text-column name="setCode"></mat-text-column>
+
+        <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+        <tr mat-row *matRowDef="let myRowData; columns: columnsToDisplay"></tr>
+      </mat-table>
+    <mat-paginator [pageSizeOptions]="[10, 20, 30]" showFirstLastButtons></mat-paginator>
+</div>

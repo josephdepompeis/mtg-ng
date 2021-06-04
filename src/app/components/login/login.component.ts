@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {LoginService} from '../services/login/login.service';
+import {LoginService} from '../../services/login/login.service';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 
 @Component({
@@ -27,14 +27,12 @@ export class LoginComponent implements OnInit {
   public getAllCards(): void {
     this.loginService.sendGetRequest().subscribe((data: any[]) => {
       console.log(data);
-      // this.products = data;
     });
   }
 
   public submit(): void {
     this.loginService.loginUser(this.loginForm.value).subscribe((data: any[]) => {
       console.log('login response', data);
-      // this.products = data;
     });
     console.log(this.loginForm.value);
   }
