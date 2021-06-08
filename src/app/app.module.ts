@@ -17,6 +17,7 @@ import {MatTableModule} from '@angular/material/table';
 import {MatSortModule} from '@angular/material/sort';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { CardLibraryComponent } from './components/card-library/card-library.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { CardLibraryComponent } from './components/card-library/card-library.com
     LoginComponent,
     RegisterComponent,
     AdminComponent,
-    CardLibraryComponent
+    CardLibraryComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
